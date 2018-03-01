@@ -1,0 +1,35 @@
+// Place all the styles related to the Emails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.unread {
+    background-color: rgba(255, 189, 15, 0.5);
+}
+
+.read {
+  background-color: rgba(255, 189, 15, 0);
+}
+
+h1 {
+	text-align: center;
+}
+
+div {
+	text-align:center;
+}
+
+table {
+	width: 100%;
+	margin: 0;
+	border: 1px solid #bfbfbf;
+	box-shadow: 1px 6px 10px #8c8c8c;
+}
+
+h2 {
+	text-align:center;
+}
+
+td {
+	border: 1px solid #bfbfbf;
+}

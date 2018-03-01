@@ -1,0 +1,31 @@
+<h1>Les emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Objet</th>
+      <th>Contenu</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr class="unread" <%= "id=tr"+ email.object %>>
+        <td><%= link_to email.object, email_appear_path(:email_id => email.id, :id_div => "div"+email.object, :id_tr => "tr"+email.object), remote:true %></td>
+        <td>
+          <div style="display:none;" <%= "id=div"+ email.object %> >
+          <p><strong><%= email.object %></strong></p>
+          <p> <%= email.body %> </p>
+          <td><%= link_to 'Effacer', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </td>
+        <td><%= link_to 'Editer', edit_email_path(email) %></td>
+      </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2><%= link_to 'Nouvel email', new_email_path %></h2>

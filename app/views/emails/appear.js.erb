@@ -1,0 +1,15 @@
+var div;
+ div = $("#<%=@idDiv%>")
+ tr = $("#<%=@idTr%>")
+
+//Faire apparaitre ou disparaitre le contenu
+if (div.css('display') == "none") {
+        div.slideDown(300);
+        <%= @email.read = true %>;
+} else {
+        div.slideUp(300);
+}
+//Changer le css si l'email est lu
+if (<%= @email.read == true %>) {
+        tr.addClass("read");
+    } 
